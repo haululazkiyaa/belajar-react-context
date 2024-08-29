@@ -2,15 +2,29 @@ import { MyContext } from "../App";
 import { useContext } from "react";
 
 const Child = () => {
-  const { data } = useContext(MyContext);
+  const { data, setData } = useContext(MyContext);
 
   return (
     <div>
       Child
       {/* Access the data from the context */}
-      <p>Nama: {data.nama}</p>
-      <p>Kota: {data.kota}</p>
-      <p>Hobby: {data.hobby}</p>
+      {data.map((item, index) => (
+        <div key={index}>
+          <p>Nama: {item.nama}</p>
+          <p>Kota: {item.kota}</p>
+          <p>Hobby: {item.hobby}</p>
+        </div>
+      ))}
+      <button
+        onClick={() =>
+          setData((prevData) => [
+            ...prevData,
+            { nama: "John", kota: "Jakarta", hobby: "Coding" },
+          ])
+        }
+      >
+        Tambah Data
+      </button>
     </div>
   );
 };
