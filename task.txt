@@ -1,0 +1,25 @@
+1. Setup project pakai vitejs
+2. npx create-vite@latest react-context --template react
+3. Tambahkan dependency tailwindess
+4. npm install -D tailwindess postcss autoprefixer
+5. npx tailwindess init -p
+6. Buka tailwind.config.js, lalu ubah bagian ini | content: ['./src/**/*.{js,jsx,ts,tsx}']
+7. Jalankan npm install
+8. Letakkan code ini di baris pertama file index.css
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+9. Hapus code yang tidak dibutuhkan di App.jsx
+10. Buat folder 'src/components'
+11. Buat child component, Child.jsx
+12. Buat folder 'src/data'
+13. Buat dummy data, data.js yang isinnya
+    {
+        nama: 'nama mantee',
+        kota: 'kota mantee', 
+        hobby: 'hobby'
+    ｝
+14. Buat context (createContext) provider di App.jsx
+15. Di context provider itu passing data.js
+16. Di Child.jsx, panggil data dari context provider mengunakan hooks useContext
+17. Push ke github
