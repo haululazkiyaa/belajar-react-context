@@ -13,6 +13,7 @@ const Child = () => {
           <p>Nama: {item.nama}</p>
           <p>Kota: {item.kota}</p>
           <p>Hobby: {item.hobby}</p>
+          <hr />
         </div>
       ))}
       <button
